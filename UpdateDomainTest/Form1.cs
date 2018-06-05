@@ -146,10 +146,10 @@ namespace UpdateDomainTest
             if (sfile.Exists)
             {
                 StreamReader stream = new StreamReader(sfile.FullName);
-                XmlSerializer serializer = new XmlSerializer(typeof(Folders));
+                XmlSerializer serializer = new XmlSerializer(typeof(FoldersConn));
                 try
                 {
-                    Folders folers = (Folders)serializer.Deserialize(stream);
+                    FoldersConn folers = (FoldersConn)serializer.Deserialize(stream);
                 }
                 catch (InvalidOperationException error)
                 {

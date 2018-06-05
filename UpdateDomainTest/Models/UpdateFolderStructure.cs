@@ -6,18 +6,21 @@ using System.Xml.Serialization;
 
 namespace UpdateDomainTest.Models
 {
-    [Serializable]        
-    public class Folders
+    [Serializable]   
+    [XmlRoot("list")]     
+    public class FoldersConn
     {
         
-        public List<Folder> Folder
+        [XmlArray("folders"), XmlArrayItem("folder")]
+        public Folder[] Folders
         {
             get; set;
         }
     }
 
 
-    [Serializable]    
+    [Serializable]
+    [XmlRoot("folder")]
     public class Folder
     {
         [XmlAttribute]
@@ -26,8 +29,8 @@ namespace UpdateDomainTest.Models
         [XmlAttribute]
         public string Over;
 
-        //[XmlArray("Folders")]
-        //public Folders Folders { get; set; }
+        [XmlArray("folders"), XmlArrayItem("folder")]
+        public Folder[] Folders { get; set; }
     }
 
 
