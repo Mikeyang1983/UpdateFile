@@ -20,6 +20,15 @@ namespace UpdateDomainTest.Models
 
 
     [Serializable]
+    [XmlRoot("dwfile")]
+    public class dwfile
+    {
+        [XmlAttribute]
+        public string Name;
+
+    }
+
+    [Serializable]
     [XmlRoot("folder")]
     public class Folder
     {
@@ -31,6 +40,9 @@ namespace UpdateDomainTest.Models
 
         [XmlArray("folders"), XmlArrayItem("folder")]
         public Folder[] Folders { get; set; }
+
+        [XmlArray("dwfile"), XmlArrayItem("dwfile")]
+        public dwfile[] dwFiles { get; set; }
     }
 
 
