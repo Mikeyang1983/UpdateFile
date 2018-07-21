@@ -4,7 +4,11 @@
     <folder Name="BO" Over="true" ></folder>
     <folder Name="CheckDomainRefDllConsole" Over="true"></folder>
     <folder  Name="dws" Over="false">
-      <dwfile Name="Domain.User.DLL"></dwfile>
+      <dwfiles>
+        <dwfile Name="Domain.User.DLL"></dwfile>
+      </dwfiles>
+        
+      
        <folders>
         <folder Name="dbin" Over="true"></folder>      
         </folders>

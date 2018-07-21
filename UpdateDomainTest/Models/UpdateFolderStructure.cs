@@ -24,7 +24,7 @@ namespace UpdateDomainTest.Models
     public class dwfile
     {
         [XmlAttribute]
-        public string Name;
+        public string Name { get; set; }
 
     }
 
@@ -41,7 +41,7 @@ namespace UpdateDomainTest.Models
         [XmlArray("folders"), XmlArrayItem("folder")]
         public Folder[] Folders { get; set; }
 
-        [XmlArray("dwfile"), XmlArrayItem("dwfile")]
+        [XmlArray("dwfiles"), XmlArrayItem("dwfile")]
         public dwfile[] dwFiles { get; set; }
     }
 
